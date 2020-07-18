@@ -22,6 +22,6 @@ db.on('error', err => console.error('ERROR after Initial connection ;( '+err) );
 db.once('open', () => console.log('Connected to mongoDB :)')); // when connection success.
 
 const indexRouter = require('./routes/index');
-app.use(apiRouter); // use controller(routes).
+app.use(indexRouter); // use controller(routes).
 
 app.listen(process.env.PORT || 3000,()=>{console.log("Listening to 3000");});
