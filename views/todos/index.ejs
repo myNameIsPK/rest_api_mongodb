@@ -1,0 +1,11 @@
+<ul>
+    <% todos.forEach(todo => { %>
+    <li data-id=<%= todo.id %>>
+        <div>
+            <%- include('../parts/_checkcomplete.ejs', { todo: todo }) %>
+            <%= todo.text %>
+            <%- include('../parts/_deletetodo.ejs', { id: todo.id }) %>
+        </div>
+    </li>
+    <% }) %>
+</ul>

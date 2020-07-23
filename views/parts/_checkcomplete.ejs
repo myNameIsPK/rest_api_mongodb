@@ -1,0 +1,4 @@
+<form method="POST" action="/todos/<%= todo.id %>?_method=PUT">
+    <input type="checkbox" id="completeCheck" name="completed" onchange="this.form.submit();"
+        <%= todo.completed ? "checked" : "" %>>
+</form>
